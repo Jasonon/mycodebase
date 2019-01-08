@@ -32,4 +32,12 @@ with pysqlite3.Database('users.db') as db:
     # sql1 = '''INSERT INTO persons2 (key, fname, lname, email) VALUES(?,?,?,?)'''
     # db.insert(sql1,[(123,'jason','li','jason@126.com')])
     rows = db.query('SELECT * FROM persons2')
-    print(rows.export('csv'))
+    print(rows.export('xls'))
+
+# 
+
+# db = Database('users.db')
+# d = db.query('SELECT * FROM persons limit 10')
+# print(d.as_list(has_header=False))
+# db.close()
+

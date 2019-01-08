@@ -345,9 +345,3 @@ def _reduce_datetimes(row):
     return tuple(row)
 
 
-if __name__=='__main__':
-
-    db = Database('users.db')
-    d = db.query('SELECT * FROM persons limit 10')
-    print(d.as_list(has_header=False))
-    db.close()
